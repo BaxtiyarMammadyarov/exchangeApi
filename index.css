@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.container{
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+.main{
+ 
+    margin-top: 100px;
+    width: 60%;
+    margin-left: 100px;
+   
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+}
+.right,.left{
+    margin: 3px;
+    background-color: antiquewhite;
+  
+}
+
+.req-val{
+  
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-between; 
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.req-val li{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.req-val li button{
+    border: 1px solid black;
+    border-radius: 5px;
+    
+ 
+    
+}
+.req,.res{
+    width: 100%; 
+    margin-top: 2px;
+    height: 100px;
+}
+
+.req-val li :hover{
+    background-color: blueviolet;
+    color: blanchedalmond;
+
+}
+.input-div{
+    position: relative;
+}
+
+.input-div span{
+    position: absolute;
+    bottom:  5px;
+    right: 10px;
+    
+}
