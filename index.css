@@ -4,17 +4,22 @@
     padding: 0;
    
 }
+body{
+    background-color: rgb(143, 146, 146);
+}
 
 .container{
   display: block;
   margin: auto;
   width: 90%;
+ 
 }
 .main{
  
-    margin-top: 100px;
+    margin-top: 200px;
     width: 60%;
-    margin-left: 100px;
+   margin-inline: auto;
+   background-color: azure;
    
     text-align: center;
     display: flex;
@@ -34,6 +39,7 @@
     justify-content: space-between; 
     margin-bottom: 2px;
     margin-top: 2px;
+    /* background-color: cadetblue; */
 }
 .req-val li{
     margin: 0;
@@ -53,11 +59,11 @@
     height: 100px;
 }
 
-.req-val li :hover{
+/* .req-val li :hover{
     background-color: blueviolet;
     color: blanchedalmond;
 
-}
+} */
 .input-div{
     position: relative;
 }
@@ -67,4 +73,8 @@
     bottom:  5px;
     right: 10px;
     
+}
+
+.active{
+    background-color: blueviolet;
 }
