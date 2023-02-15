@@ -12,12 +12,19 @@ const btn_out = document.querySelectorAll(".btn-out");
 const btn_in = document.querySelectorAll(".btn-in");
 let fromValyuta = '';
 let toValyuta = '';
-async function fetchMetod(fromValyuta, toValyuta,amount,out) {
+async function fetchMetod(btn,fromValyuta, toValyuta,input,out) {
     const res = await fetch(`https://api.exchangerate.host/latest?base=${fromValyuta}&symbols=${toValyuta}`);
     const data = await res.json();
     const kurs = parseFloat(data.rates[toValyuta]);
+    const amount = parseFloat(input.value)
     out.value = amount * kurs;
+    console.log("input",input)
+    input.value = "";
+
+    console.log("input",input)
+    console.log("out",input)
     console.log(data.rates[toValyuta]);
+
 }
 
 function disableEnabeleBtn(btn,value){
@@ -26,7 +33,7 @@ function disableEnabeleBtn(btn,value){
 }
 
 
-function setValyuta(btn,amount,out){
+function setValyuta(btn,input,out){
     if (fromValyuta.length === 0) {
        
         fromValyuta = btn.value;
@@ -34,68 +41,60 @@ function setValyuta(btn,amount,out){
     } else {
         toValyuta = btn.value;
    
-        fetchMetod(fromValyuta, toValyuta ,amount,out)
+        fetchMetod(btn,fromValyuta, toValyuta ,input,out)
 
     }
 }
 
 btn_azn_in.addEventListener('click', (e) => {
-    const amount = parseFloat(out.value)
-    setValyuta(btn_azn_in,amount,input);
+   
+    setValyuta(btn_azn_in,out,input);
     disableEnabeleBtn(btn_in,true);
     disableEnabeleBtn(btn_out,false);
 
 })
 btn_eur_in.addEventListener('click', (e) => {
    
-    const valyuta = btn_eur_in.value;
-    const amount = parseFloat(out.value)
-    setValyuta(btn_eur_in,amount,input);
+    setValyuta(btn_azn_in,out,input);
     disableEnabeleBtn(btn_in,true);
     disableEnabeleBtn(btn_out,false);
 
 })
 btn_usd_in.addEventListener('click', (e) => {
   
-    const amount = parseFloat(out.value)
-    setValyuta(btn_azn_in,amount,input);
+    setValyuta(btn_azn_in,out,input);
     disableEnabeleBtn(btn_in,true);
     disableEnabeleBtn(btn_out,false);
 
 })
 btn_gbp_in.addEventListener('click', (e) => {
 
-    const amount = parseFloat(out.value)
-    setValyuta(btn_gbp_in,amount,out);
+    setValyuta(btn_azn_in,out,input);
     disableEnabeleBtn(btn_in,true);
     disableEnabeleBtn(btn_out,false);
 
 })
 btn_azn_out.addEventListener('click', (e) => {
   
-    const amount = parseFloat(input.value)
-    setValyuta(btn_azn_out,amount,out);
+    setValyuta(btn_azn_in,input,out);
     disableEnabeleBtn(btn_in,false);
     disableEnabeleBtn(btn_out,true);
 
 })
 btn_eur_out.addEventListener('click', (e) => {
-    const amount = parseFloat(input.value)
-    setValyuta(btn_eur_out,amount,out);
+    setValyuta(btn_azn_in,input,out);
     disableEnabeleBtn(btn_in,false);
     disableEnabeleBtn(btn_out,true);
 
 })
 btn_usd_out.addEventListener('click', (e) => {
-    const amount = parseFloat(input.value);
-    setValyuta(btn_usd_out,amount,out);
+    setValyuta(btn_azn_in,input,out);
     disableEnabeleBtn(btn_in,false);
     disableEnabeleBtn(btn_out,true);
 
 })
 btn_gbp_out.addEventListener('click', (e) => {
-    const amount = parseFloat(input.value);
-    setValyuta(btn_gbp_out,amount,out);
+    setValyuta(btn_azn_in,input,out);
     disableEnabeleBtn(btn_in,false);
     disableEnabeleBtn(btn_out,true);
 
