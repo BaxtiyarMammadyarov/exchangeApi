@@ -43,8 +43,10 @@ img {
 .title{
     display:flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
     margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
  .title-login {
@@ -54,10 +56,10 @@ img {
 
 .title li ,.title-login li{
     padding: 3px;
-
+    margin: 2px;
     list-style-type: none;
     color: beige;
-    font-size: 80%;
+    font-size: 60%;
     text-align: center;
 }
 
