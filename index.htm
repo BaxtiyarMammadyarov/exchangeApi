@@ -11,28 +11,61 @@
 
 <body>
     <div class="container">
+        <div class="header">
+          <div class="icon">
+            <a href=""> <img src="image/Asset 1@3x 1.svg" alt=""></a>
+          </div> 
+          <ul class="title">
+            <li>БАНК</li>
+            <li>БИЗНЕС</li>
+            <li>INVESTISIYA</li>
+            <li>ИНВЕСТИЦИИ</li>
+            <li>СТРАХОВАНИЕ</li>
+            <li>МОБАЙЛ</li>
+            <li>ПУТЕШЕСТВИЯ</li>
+            <li>РАЗВЛЕЧЕНИЯ</li>
+          </ul> 
+          <div class="login">
+            <a href=""><p>ВОЙТИ</p></a>
+          </div> 
+          <div class="toggle">
+           |||
+            <ul class="title-login">
+                <li>БАНК</li>
+                <li>БИЗНЕС</li>
+                <li>INVESTISIYA</li>
+                <li>ИНВЕСТИЦИИ</li>
+                <li>СТРАХОВАНИЕ</li>
+                <li>МОБАЙЛ</li>
+                <li>ПУТЕШЕСТВИЯ</li>
+                <li>РАЗВЛЕЧЕНИЯ</li>
+              </ul>
+          </div>
+
+        </div>
+        <h1>Valyuta Məzzənəsi</h1>
         <div class="main">
             <div class="left">
-                <ul class="req-val">
-                    <li><button class="btn-in" onclick="onClickBtn(event)" value="AZN">AZN</button></li>
-                    <li><button class="btn-in" onclick="onClickBtn(event)" value="EUR">EUR</button></li>
-                    <li><button class="btn-in" onclick="onClickBtn(event)" value="USD">USD</button></li>
-                    <li><button class="btn-in" onclick="onClickBtn(event)" value="GBP">GBP</button></li>
-                </ul>
+                <div class="left-btn">
+                    <button class="btn-in" onclick="onClickBtn(event)" value="AZN">AZN</button>
+                    <button class="btn-in" onclick="onClickBtn(event)" value="EUR">EUR</button>
+                    <button class="btn-in" onclick="onClickBtn(event)" value="USD">USD</button>
+                    <button class="btn-in" onclick="onClickBtn(event)" value="GBP">GBP</button>
+                </div>
 
                 <div class="input-div">
-                    <input class='req' id="input-req" type="number" />
+                    <input class='req' id="input-req" type="number" value= 1 />
                     <span id="input-req-sm"></span>
                 </div>
             </div>
-            <div>test</div>
+            <div class="div-img"><img src="image/angle-left.svg"/><img src="image/angle-right.svg"/></div>
             <div class="right">
-                <ul class="req-val">
-                    <li><button class="btn-out" onclick="onClickBtn(event)" value="AZN">AZN</button></li>
-                    <li><button class="btn-out" onclick="onClickBtn(event)" value="EUR">EUR</button></li>
-                    <li><button class="btn-out" onclick="onClickBtn(event)" value="USD">USD</button></li>
-                    <li><button class="btn-out" onclick="onClickBtn(event)" value="GBP">GBP</button></li>
-                </ul>
+                <div class="right-btn">
+                    <button class="btn-out" onclick="onClickBtn(event)" value="AZN">AZN</button>
+                    <button class="btn-out" onclick="onClickBtn(event)" value="EUR">EUR</button>
+                    <button class="btn-out" onclick="onClickBtn(event)" value="USD">USD</button>
+                    <button class="btn-out" onclick="onClickBtn(event)" value="GBP">GBP</button>
+                </div>
                 <div class="input-div">
                     <input class='res' id="input-res" type="text" disabled />
                     <span id="input-res-sm"></span>
